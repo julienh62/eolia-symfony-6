@@ -6,6 +6,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="/">Home</a>
                 </li> 
@@ -27,16 +28,16 @@
 {#                <li class="nav-item">#}
 {#                    <a class="nav-link disabled">Disabled</a>#}
 {#                </li>#}
-     {#       </ul> #}
+           </ul> 
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                {% if app.user %}
+             {% if app.user %}  
                     <li class="nav-item">
                         <a class="nav-link" href="#">Mon compte</a>
                     </li>
-                   <li class="nav-item">
-                        <a class="nav-link" href="{{ path('app_logout') }}" >Me déconnecter</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('app_logout') }}" >Me déconneter</a>
                     </li>
-                {% else %}
+               {% else %}
                     <li class="nav-item">
                        <a class="nav-link" href=" {{ path('app_registration')  }}" >M'inscrire</a>
                     </li>  
@@ -44,9 +45,9 @@
                         <a class="nav-link" href="{{ path('app_login') }}" >Me connecter</a>
                     </li>
                 {% endif %}
-                  <li class="nav-item">
-              {#      <a class="nav-link" href="#">🛒 {{ CartHandler.total > 0 ? CartHandler.total ~ ' €' : null }}</a> #}
-                </li>
+                    <li class="nav-item">
+                   <a class="nav-link" href="#">🛒 {#{{ CartHandler.total > 0 ? CartHandler.total ~ ' €' : null }}  #} </a> 
+                   </li>
             </ul>
         </div>
     </div>
